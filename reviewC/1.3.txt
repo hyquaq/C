@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#define SIZE 100
+
+float dqA(int a[], int length, int i)
+{
+    if(i == 0)
+        return a[i]/(length*1.0);
+
+    return a[i]/(length*1.0) + dqA(a, length, i-1);
+}
+
+int maxIn(int a, int b)
+{
+    if ( a > b )
+        return a;
+    return b;
+}
+//float dqB(int a[], int length, int i)
+//{
+//    if(i == 0)
+//        return maxIn(a[i],)
+//
+//    return a[i]/(length*1.0) + dqA(a, length, i-1);
+//}
+
+float dqC(x)
+{
+    if(x == 0)
+        return 1;
+    return 2.0*dqC(x-1) + 3/4.0;
+}
+int main()
+{
+    int a[5] = {1,2,3,3,3};
+    printf("%f",dqC(3));
+
+    return 0;
+}

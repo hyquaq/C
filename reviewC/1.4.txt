@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <string.h>
+#define SIZE 100
+
+typedef struct
+{
+    char name[SIZE];
+    char mssv[SIZE];
+    int namSinh;
+    float diemTb;
+    int soNgayNghi;
+} sv;
+
+void scanfInfo(sv svs[], int length)
+{
+    for(int i = 0 ; i < length; i++)
+    {
+        printf("ten sv[%d]: ", i);
+        scanf("%s",&svs[i].name);
+        printf("mssv sv[%d]: ", i);
+        scanf("%s",&svs[i].mssv);
+        printf("nam sinh sv[%d]: ", i);
+        scanf("%d",&svs[i].namSinh);
+        printf("diem trung binh sv[%d]: ", i);
+        scanf("%f",&svs[i].diemTb);
+        printf("so ngay nghi sv[%d]: ", i);
+        scanf("%d",&svs[i].soNgayNghi);
+    }
+}
+
+void outPut(sv svs[], int length)
+{
+    printf("danh sach khen thuong:\n\n");
+    for(int i = 0 ; i < length; i++)
+    {
+        if(svs[i].diemTb > 7.0)
+        {
+            printf("++ten %s ", svs[i].name);
+            printf("diem trung binh %f.\n", svs[i].diemTb);
+        }
+    }
+    printf("danh sach nhac nho:\n\n");
+    for(int i = 0 ; i < length; i++)
+    {
+        if(svs[i].soNgayNghi > 3)
+        {
+            printf("++ten %s ", svs[i].name);
+            printf("so ngay nghi %d.\n", svs[i].soNgayNghi);
+        }
+    }
+}
+int main()
+{
+    int soLuongSv;
+    sv svs[SIZE];
+    scanf("%d",&soLuongSv);
+    scanfInfo(svs, soLuongSv);
+    outPut(svs, soLuongSv);
+    return 0;
+}

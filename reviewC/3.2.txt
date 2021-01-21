@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+//    int -arr[2][2][3] = {{{1,2,3}, {4,5,6}, {7,8,9}, {10,11,12} }};
+
+//    int a=1,b=2,c=3;
+//    int max = a > b ? a > c? a:c:b > c? b:c;
+//    printf("%d",max);
+//    int y = 1;
+//    const int x = y;
+//    printf("%d",x);
+
+//    int x = 10, y = 20;
+//    if(!(!x) && x)
+//        printf("x");
+//    else
+//        printf("Y");
+
+//    int a[5] = {5,1,15,20,25};
+//    int i = ++a[1];
+//    int j = a[1]++;
+//    int m = a[i++];
+//    printf("%d %d %d", i,j,m);
+    return 0;
+}
